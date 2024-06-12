@@ -1,0 +1,21 @@
+{
+  "username": "usertester",
+  "email": "usertester@email.com",
+  "password": "p4ssw0rd",
+
+  "card_name": "User Tester",
+  "card_number": "123456789",
+  "card_cvc": "123 ",
+  "card_exp_month": "12",
+  "card_exp_year": "2024",
+
+  "user_first_name": "User",
+  "user_last_name": "Tester",
+  "user_company": "Apply Digital",
+  "user_address": "1066 W Hastings St #1205, Vancouver",
+  "user_country": "Canada",
+  "user_state": "British Columbia",
+  "user_city": "Vancouver",
+  "user_zipcode": "V6E 3X1",
+  "user_phone": "123-456-7890"
+}

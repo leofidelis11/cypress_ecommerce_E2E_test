@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-12T20:36:44.931Z",
+    "end": "2024-06-12T20:37:34.234Z",
+    "duration": 49303,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed9afc5c-10a7-433a-b6d5-5ab26cca499d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ecommerce.cy.js",
+      "file": "cypress\\e2e\\ecommerce.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c218ebe6-f0fe-4120-8782-4e4b689c772c",
+          "title": "Clothing Store User Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform clothing store user flow",
+              "fullTitle": "Clothing Store User Flow Perform clothing store user flow",
+              "timedOut": null,
+              "duration": 44074,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const email = faker.internet.email();\n//visit website\ncy.visit('https://automationexercise.com/');\ncy.get('a > img').should('be.visible');\n//scroll to center\ncy.scrollTo('center');\n//click on product\ncy.get('a[href=\"/product_details/24\"]').click();\n//increase product quantity and add to cart\ncy.get('#quantity').clear().type('30');\ncy.get('#quantity').should('have.value', '30');\ncy.get('button[type=\"button\"]').click();\ncy.get('u').click();\n//proceed to checkout\ncy.get('.check_out').click();\n//register/login\ncy.get('u').contains('Register').click();\n//user sign up\ncy.get('[data-qa=\"signup-name\"]').type('User Tester');\ncy.get('[data-qa=\"signup-email\"]').type(email);\ncy.get('[data-qa=\"signup-button\"]').click();\n//account and address information\ncy.get('#id_gender2').click();\ncy.get('[data-qa=\"password\"]').type(data.password);\ncy.get('[data-qa=\"days\"]').select('5');\ncy.get('[data-qa=\"months\"]').select('January');\ncy.get('[data-qa=\"years\"]').select('2000');\ncy.get('#newsletter').click();\ncy.get('#optin').click();\ncy.get('#first_name').type(data.user_first_name);\ncy.get('#last_name').type(data.user_last_name);\ncy.get('#company').type(data.user_company);\ncy.get('#address1').type(data.user_address);\ncy.get('#country').select(data.user_country);\ncy.get('#state').type(data.user_state);\ncy.get('#city').type(data.user_city);\ncy.get('#zipcode').type(data.user_zipcode);\ncy.get('#mobile_number').type(data.user_phone);\n//click on create account button\ncy.get('[data-qa=\"create-account\"]').click();\ncy.get('b').should('be.visible');\n//click on continue button\ncy.get('[data-qa=\"continue-button\"]').click();\n//go to cart\ncy.get('li a[href*=\"view_cart\"]').click();\n//click on checkout link\ncy.get('a').contains('Proceed To Checkout').click();\n//write a comment\ncy.get('.form-control').type('I am writing a comment');\n//click on payment button\ncy.get('div a[href*=\"payment\"]').click();\n//fill card information, pay and confirm order\ncy.get('[data-qa=\"name-on-card\"]').type(data.card_name);\ncy.get('[data-qa=\"card-number\"]').type(data.card_number);\ncy.get('[data-qa=\"cvc\"]').type(data.card_cvc);\ncy.get('[data-qa=\"expiry-month\"]').type(data.card_exp_month);\ncy.get('[data-qa=\"expiry-year\"]').type(data.card_exp_year);\ncy.get('[data-qa=\"pay-button\"]').click();\ncy.get('[data-qa=\"order-placed\"] > b').should('be.visible');\n//click on continue button and go to home\ncy.get('[data-qa=\"continue-button\"]').click();\ncy.get('a > img').should('be.visible');\n//click on logout link\ncy.get('[href=\"/logout\"]').click();\n//perform login\ncy.get('[data-qa=\"login-email\"]').type(data.email);\ncy.get('[data-qa=\"login-password\"]').type(data.password);\ncy.get('[data-qa=\"login-button\"]').click();\ncy.get('[href=\"/logout\"]').should('be.visible');\n//click on contact us link\ncy.get('[href=\"/contact_us\"]').click();\ncy.get('h2').contains('Contact').should('be.visible');\n//fill contact form and submit it\ncy.get('[data-qa=\"name\"]').type(data.username);\ncy.get('[data-qa=\"email\"]').type(data.email);\ncy.get('[data-qa=\"subject\"]').type('My order');\ncy.get('[data-qa=\"message\"]').type('This is my message to submit the form');\ncy.fixture('example.json').as('attachment');\ncy.get('input[name=\"upload_file\"]').selectFile('@attachment').should(function ($input) {\n  expect($input[0].files[0].name).to.equal('example.json');\n});\ncy.get('[data-qa=\"submit-button\"]').click();\ncy.get('.status').should('be.visible');\n//click on logout link\ncy.get('[href=\"/logout\"]').click();\ncy.get('[href=\"/login\"]').should('be.visible');",
+              "err": {},
+              "uuid": "b17267dd-e204-40ed-a695-58f6b8d768aa",
+              "parentUUID": "c218ebe6-f0fe-4120-8782-4e4b689c772c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b17267dd-e204-40ed-a695-58f6b8d768aa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44074,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -11,11 +11,11 @@
 
   "user_first_name": "User",
   "user_last_name": "Tester",
-  "user_company": "Apply Digital",
-  "user_address": "1066 W Hastings St #1205, Vancouver",
-  "user_country": "Canada",
-  "user_state": "British Columbia",
-  "user_city": "Vancouver",
-  "user_zipcode": "V6E 3X1",
+  "user_company": "Company Test",
+  "user_address": "94 Example St, Hollywood",
+  "user_country": "United States",
+  "user_state": "California",
+  "user_city": "Los Angeles",
+  "user_zipcode": "12345",
   "user_phone": "123-456-7890"
 }

@@ -1,2 +1,2 @@
-﻿# apply_skill_test
+﻿# POC_skill_test
 repository of skill test
